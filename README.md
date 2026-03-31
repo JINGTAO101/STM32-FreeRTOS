@@ -307,9 +307,13 @@ python APP.py
 
 - 按下按键，OLED切换画面，显示当前LED、SG90舵机状态。
 
+### 上位机显示：
+
 ![](picture/image-20260331155246272.png)
 
 蓝牙控制面板
+
+### 交互：
 
 通过下发指令可控制LED亮\灭\闪烁，以及SG90旋转角度。
 
@@ -318,6 +322,10 @@ python APP.py
 ![image-20260331160032661](picture/image-20260331160032661.png)
 
 上位机下发`LED_ON`、`SET_ANGLE=139`指令，下位机响应。
+
+![](picture/faa266b64511a16e84e79c5cdfb1dcca.jpg)
+
+设置的SG90旋转角度以及对应的PWM波形
 
 ## 技术特点
 
