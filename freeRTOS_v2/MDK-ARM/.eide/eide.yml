@@ -1,0 +1,233 @@
+version: "4.1"
+name: freeRTOS_v2
+type: ARM
+deviceName: null
+packDir: null
+srcDirs:
+  - ../Driver/BSP
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Application
+      files: []
+      folders:
+        - name: MDK-ARM
+          files:
+            - path: startup_stm32f103xb.s
+          folders: []
+        - name: User
+          files: []
+          folders:
+            - name: Core
+              files:
+                - path: ../Core/Src/main.c
+                - path: ../Core/Src/gpio.c
+                - path: ../Core/Src/freertos.c
+                - path: ../Core/Src/dma.c
+                - path: ../Core/Src/tim.c
+                - path: ../Core/Src/usart.c
+                - path: ../Core/Src/stm32f1xx_it.c
+                - path: ../Core/Src/stm32f1xx_hal_msp.c
+                - path: ../Core/Src/stm32f1xx_hal_timebase_tim.c
+              folders: []
+    - name: Drivers
+      files: []
+      folders:
+        - name: STM32F1xx_HAL_Driver
+          files:
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c
+          folders: []
+        - name: CMSIS
+          files:
+            - path: ../Core/Src/system_stm32f1xx.c
+          folders: []
+    - name: Middlewares
+      files: []
+      folders:
+        - name: FreeRTOS
+          files:
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/list.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/queue.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/timers.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+            - path: ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
+          folders: []
+    - name: bsp
+      files:
+        - path: ../Driver/BSP/led.c
+        - path: ../Driver/BSP/key.c
+        - path: ../Driver/BSP/dht11.c
+        - path: ../Driver/BSP/OLED.c
+        - path: ../Driver/BSP/jdy31.c
+      folders: []
+    - name: ::CMSIS
+      files: []
+      folders: []
+dependenceList: []
+outDir: build
+miscInfo:
+  uid: 1f0b84017e65d1e3238a77a664f9736a
+targets:
+  freeRTOS_v2:
+    cppPreprocessAttrs:
+      defineList:
+        - USE_HAL_DRIVER
+        - STM32F103xB
+      incList:
+        - ../Core/Inc
+        - ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Inc
+        - ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
+        - ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/include
+        - ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS
+        - ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3
+        - ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/CMSIS/Device/ST/STM32F1xx/Include
+        - ../../../../../STM32Cube/Repository/STM32Cube_FW_F1_V1.8.7/Drivers/CMSIS/Include
+        - ../Driver/BSP
+        - .cmsis/include
+        - RTE/_freeRTOS_v2
+      libList: []
+    excludeList: []
+    toolchain: AC5
+    toolchainConfigMap:
+      AC5:
+        archExtensions: ""
+        cpuType: Cortex-M3
+        floatingPointHardware: none
+        options:
+          version: 4
+          afterBuildTasks: []
+          asm-compiler:
+            defines: []
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
+            c99-mode: true
+            one-elf-section-per-function: true
+            optimization: level-3
+            warnings: all-warnings
+          global:
+            output-debug-info: enable
+            use-microLIB: false
+          linker:
+            $outputTaskExcludes:
+              - .bin
+            output-format: elf
+            ro-base: ""
+            rw-base: ""
+            xo-base: ""
+        scatterFilePath: ""
+        storageLayout:
+          RAM:
+            - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
+              isChecked: true
+              mem:
+                size: "0x5000"
+                startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: IRAM
+          ROM:
+            - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
+              isChecked: true
+              isStartup: true
+              mem:
+                size: "0x10000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: IROM
+        useCustomScatterFile: false
+    uploadConfigMap:
+      JLink:
+        baseAddr: ""
+        bin: ""
+        cpuInfo:
+          cpuName: "null"
+          vendor: "null"
+        otherCmds: ""
+        proType: 1
+        speed: 8000
+      STLink:
+        address: "0x8000000"
+        bin: ""
+        elFile: None
+        optionBytes: .eide/freertos_v2.st.option.bytes.ini
+        otherCmds: ""
+        proType: SWD
+        resetMode: default
+        runAfterProgram: true
+        speed: 4000
+    uploader: STLink
