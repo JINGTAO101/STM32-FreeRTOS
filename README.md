@@ -30,7 +30,7 @@
 
 ### 物料：
 
-![image-20260331153002698](../../../../AppData/Roaming/Typora/typora-user-images/image-20260331153002698.png)
+![](picture/image-20260331153002698.png)
 
 | 物料名称     | 具体型号 / 规格                                  | 数量 | 核心作用                               | 项目适配要点                                                 |
 | ------------ | ------------------------------------------------ | ---- | -------------------------------------- | ------------------------------------------------------------ |
@@ -257,7 +257,7 @@ GET_STATUS      # 查询设备状态
 
 ### JDY-31 蓝牙控制面板
 
-![image-20260331153915817](../../../../AppData/Roaming/Typora/typora-user-images/image-20260331153915817.png)
+![image-20260331153915817](picture/image-20260331153915817.png)
 
 #### 使用步骤
 
@@ -298,26 +298,26 @@ python APP.py
 
 ### 下位机显示：
 
-![image-20260331154837651](../../../../AppData/Roaming/Typora/typora-user-images/image-20260331154837651.png)
+![](picture/image-20260331154837651.png)
 
 - 上电1秒后，DHT11采集数据
 - OLED显示当前温湿度数据。
 
-![image-20260331155007210](../../../../AppData/Roaming/Typora/typora-user-images/image-20260331155007210.png)
+![](picture/image-20260331155007210.png)
 
 - 按下按键，OLED切换画面，显示当前LED、SG90舵机状态。
 
-![image-20260331155246272](../../../../AppData/Roaming/Typora/typora-user-images/image-20260331155246272.png)
+![](picture/image-20260331155246272.png)
 
 蓝牙控制面板
 
 通过下发指令可控制LED亮\灭\闪烁，以及SG90旋转角度。
 
-![image-20260331155810144](../../../../AppData/Roaming/Typora/typora-user-images/image-20260331155810144.png)
+![](picture/image-20260331155810144.png)
 
-![image-20260331160032661](../../../../AppData/Roaming/Typora/typora-user-images/image-20260331160032661.png)
+![image-20260331160032661](picture/image-20260331160032661.png)
 
-上位机下发`LED_ON`、`SET_ANGLE=139`指令，下位机响应。0o
+上位机下发`LED_ON`、`SET_ANGLE=139`指令，下位机响应。
 
 ## 技术特点
 
